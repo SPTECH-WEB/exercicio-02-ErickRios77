@@ -47,4 +47,28 @@ Você foi contratado para desenvolver um módulo de **logística**. Esse módulo
 
 ---
 
+## Padrões
+
+### Strategy
+Permite trocar dinamicamente o modo de cálculo do frete com base na escolha do cliente.
+
+### Adapter
+Permite integrar com uma transportadora externa sem alterar a lógica interna do sistema.
+
+---
+
+## Endpoints
+### 1. Calculo de frete (`GET /frete?peso={}&modalidade={}`)
+- Modalidades:
+  - Entrega express
+  - Entrega economica
+  - Entrega externa
+  - Entrega terceirizada
+
+
+- Exemplo:
+  - Requisição: `GET /frete?peso=10&modalidade=Entrega expressa`
+  - Resposta: `O valor do frete para a modalidade de Entrega expressa é de R$18.0`
+
+
 
